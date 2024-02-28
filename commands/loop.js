@@ -16,7 +16,7 @@
 const db = require("../mongoDB");
 module.exports = {
   name: "loop",
-  description: "Turns the music loop mode on or off.",
+  description: "Ativa ou desativa o modo de loop de música.",
   permissions: "0x0000000000000800",
   options: [],
   voiceChannel: true,
@@ -45,11 +45,11 @@ module.exports = {
       const embed = new EmbedBuilder()
         .setColor('#fc4e03')
         .setAuthor({
-        name: 'Loop Your Melodies',
+        name: 'Faça um loop em suas melodias',
         iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157318080670728283/7905-repeat.gif?ex=65182bf4&is=6516da74&hm=9ae58f40fcea5dc42a2a992bbd159d50116b3bafe5c5f7728e3a5276442efd2a&', 
-        url: 'https://discord.gg/FUEHs7RCqz'
+        url: 'https'
     })
-        .setDescription('**Looping it! Let the music play on and on. **')
+        .setDescription('**Fazendo um loop! Deixe a música tocar sem parar.**')
      
       interaction?.reply({ embeds: [embed], components: [button], fetchReply: true }).then(async Message => {
 
@@ -95,7 +95,7 @@ module.exports = {
 
           const embed = new EmbedBuilder()
             .setColor('#fc5203')
-            .setTitle('▶️ Looping off!!')
+            .setTitle('▶️ Loop desligado!!')
             .setTimestamp()
 
           await interaction?.editReply({ content: "", embeds: [embed], components: [button] }).catch(e => { });
