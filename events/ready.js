@@ -1,4 +1,5 @@
 const config = require("../config.js");
+const token = "MTIxMjQyNzg1Mzg3OTA1NDM3Ng.Gl4hrx.yHzcxkYuDOVQBQm0w_e51XLXJCqlS-w8M2I_V0";
 const { ActivityType  } = require("discord.js")
 module.exports = async (client) => {
 
