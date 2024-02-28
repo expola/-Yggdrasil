@@ -21,7 +21,7 @@ const { ButtonStyle } = require('discord.js');
 
 module.exports = {
   name: "help",
-  description: "Get information about bot and commands.",
+  description: "Informações sobre bot e comandos.",
   permissions: "0x0000000000000800",
   options: [],
 
@@ -49,12 +49,12 @@ module.exports = {
         .setColor(client.config.embedColor)
         .setTitle('✨ **Basic Commands**')
         .addFields(
-          { name: '🏓 Ping', value: "Check the bot's latency" },
-          { name: '🗑️ Clear', value: 'Clear the song queue of this server' },
-          { name: '⏱️ Time', value: 'Display the current song playback time' },
-          { name: '🎧 Filter', value: 'Apply filters to enhance the sound as you love' },
-           { name: '🎵 Now Playing', value: 'Display the currently playing song information' },
-          { name: '🔊 Volume', value: 'Adjust the music volume [ hearing at high volumes is risky ]' },
+          { name: '🏓 Ping', value: "Verifique a latência do bot" },
+          { name: '🗑️ Clear', value: 'Limpe a fila de músicas deste servidor' },
+          { name: '⏱️ Time', value: 'Exibir o tempo de reprodução da música atual' },
+          { name: '🎧 Filter', value: 'Aplique filtros para aprimorar o som como você gosta' },
+           { name: '🎵 Now Playing', value: 'Exibir as informações da música atualmente sendo reproduzida' },
+          { name: '🔊 Volume', value: 'Ajuste o volume da música [ouvir em volumes altos é complicadet]' },
         ) 
        .setImage('https://cdn.discordapp.com/attachments/1150827819547504741/1168917372267151370/standard.gif?ex=65538222&is=65410d22&hm=b4994392f44679da41fc9304eb69deaa3769e136057556deec0db69ae8d33a97&')
       const button1 = new ButtonBuilder()
