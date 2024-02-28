@@ -17,11 +17,11 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const db = require("../mongoDB");
 module.exports = {
   name: "skip",
-  description: "Switches the music being played.",
+  description: "Muda a música que está sendo tocada",
   permissions: "0x0000000000000800",
   options: [{
     name: "number",
-    description: "mention how many songs you wanna skip",
+    description: "mencione quantas músicas você quer pular",
     type: ApplicationCommandOptionType.Number,
     required: false
   }],
@@ -31,13 +31,13 @@ module.exports = {
     try {
 
       const queue = client.player.getQueue(interaction.guild.id);
-      if (!queue || !queue.playing) return interaction.reply({ content: '⚠️ No music playing!!', ephemeral: true }).catch(e => { })
+      if (!queue || !queue.playing) return interaction.reply({ content: '⚠️ Nenhuma música tocando!!', ephemeral: true }).catch(e => { })
 
       let number = interaction.options.getNumber('number');
       if (number) {
-        if (!queue.songs.length > number) return interaction.reply({ content: '⚠️ Exceeded current no of songs', ephemeral: true }).catch(e => { })
-        if (isNaN(number)) return interaction.reply({ content: '⚠️ Invalid Number', ephemeral: true }).catch(e => { })
-        if (1 > number) return interaction.reply({ content: '⚠️ Invalid Number', ephemeral: true }).catch(e => { })
+        if (!queue.songs.length > number) return interaction.reply({ content: '⚠️ Excedeu o número atual de músicas', ephemeral: true }).catch(e => { })
+        if (isNaN(number)) return interaction.reply({ content: '⚠️ Número inválido', ephemeral: true }).catch(e => { })
+        if (1 > number) return interaction.reply({ content: '⚠️ Número inválido', ephemeral: true }).catch(e => { })
 
         try {
         let old = queue.songs[0];
@@ -45,13 +45,13 @@ module.exports = {
           return interaction.reply({ content: `⏯️ Skipped : **${old.name}**` }).catch(e => { })
         })
       } catch(e){
-        return interaction.reply({ content: '❌ Queue is empty!!', ephemeral: true }).catch(e => { })
+        return interaction.reply({ content: '❌ A fila está vazia!!', ephemeral: true }).catch(e => { })
       }
       } else {
 try {
   const queue = client.player.getQueue(interaction.guild.id);
   if (!queue || !queue.playing) {
-    return interaction.reply({ content: '⚠️ No music playing!!', ephemeral: true });
+    return interaction.reply({ content: '⚠️ Nenhuma música tocando!!', ephemeral: true });
   }
 
   let old = queue.songs[0];
