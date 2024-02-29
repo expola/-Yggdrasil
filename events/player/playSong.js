@@ -11,7 +11,7 @@ module.exports = async (client, queue, song) => {
         iconURL: 'https://cdn.discordapp.com/attachments/1140841446228897932/1144671132948103208/giphy.gif', 
         url: 'https://discord.gg/FUEHs7RCqz'
     })
-    .setDescription(`\n ‎ \n▶️ **Details :** **${song?.name}**\n▶️ **Enjoy the Ultimate Music Experience. ** \n▶️ **If link breaks playback try to give query.**`)
+    .setDescription(`\n ‎ \n▶️ **Detalhes :** **${song?.name}**\n▶️ **Aproveite a melhor experiência musical. ** \n▶️ **Se o link quebrar a reprodução, tente dar uma buscar melhor.**`)
 .setImage(queue.songs[0].thumbnail)
     .setColor('#FF0000')
     .setFooter({ text: 'Pega a padrada <3' });
