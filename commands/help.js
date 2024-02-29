@@ -56,7 +56,7 @@ module.exports = {
            { name: '🎵 Now Playing', value: 'Exibir as informações da música atualmente sendo reproduzida' },
           { name: '🔊 Volume', value: 'Ajuste o volume da música [ouvir em volumes altos é arriscado]' },
         ) 
-       .setImage('https://tenor.com/view/dance-annime-jam-comes-on-listening-music-gif-8134608')
+       .setImage('https://cdn.discordapp.com/attachments/1004341381784944703/1165201249331855380/RainbowLine.gif?ex=654f37ba&is=653cc2ba&hm=648a2e070fab36155f4171962e9c3bcef94857aca3987a181634837231500177&')
       const button1 = new ButtonBuilder()
         .setLabel('Pedrada')
         .setURL('https://youtu.be/XyYJ1oXO64Q?list=RDGMEM6ijAnFTG9nX1G-kbWBUCJAVMXyYJ1oXO64Q')
