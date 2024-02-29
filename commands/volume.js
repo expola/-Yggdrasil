@@ -24,18 +24,18 @@ module.exports = {
 
       if (!vol) {
         return interaction.reply({
-          content: `Current volume: **${queue.volume}** 🔊\nTo change the volume, type a number between \`1\` and \`${maxVol}\`.`,
+          content: `Current volume: **${queue.volume}** 🔊\nPara alterar o volume, digite um número entre \`1\` e \`${maxVol}\`.`,
           ephemeral: true
         });
       }
 
       if (queue.volume === vol) {
-        return interaction.reply({ content: 'Current volume is already set to **' + vol + '**!', ephemeral: true });
+        return interaction.reply({ content: 'O volume atual já está definido para **' + vol + '**!', ephemeral: true });
       }
 
       if (vol < 1 || vol > maxVol) {
         return interaction.reply({
-          content: `Please type a number between \`1\` and \`${maxVol}\`.`,
+          content: `Por favor digite um número entre \`1\` e \`${maxVol}\`.`,
           ephemeral: true
         });
       }
@@ -46,11 +46,11 @@ module.exports = {
         const embed = new EmbedBuilder()
           .setColor('#d291fe')
           .setAuthor({
-        name: 'Your Music! Your Rules!',
+        name: 'Sua música! Suas regras!',
         iconURL: 'https://cdn.discordapp.com/attachments/1156866389819281418/1157528025739563088/5657-volume-icon.png?ex=6518ef7b&is=65179dfb&hm=1797c2830537a28b5c6a57564517cc509146d02383a69fb4239d7b5d55aceeed&', 
         url: 'https://discord.gg/FUEHs7RCqz'
     })
-          .setDescription(`**Adjusting Volume : ** **${vol}/${maxVol}**`);
+          .setDescription(`**Ajustando o volume: ** **${vol}/${maxVol}**`);
 
         return interaction.reply({ embeds: [embed] });
       } else {
